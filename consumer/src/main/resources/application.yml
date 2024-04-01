@@ -1,0 +1,17 @@
+server:
+  port: 5002
+
+
+spring:
+  application:
+    name: consumer
+  cloud:
+    stream:
+      bindings:
+        sink1-in-0:
+          destination: test1
+      function:
+        definition: sink1
+      kafka:
+        binder:
+          brokers: 192.168.95.1:9092
